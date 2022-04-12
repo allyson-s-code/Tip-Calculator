@@ -106,16 +106,24 @@ main {
   align-items: center;
 }
 
+.hide {
+  display: none !important;
+}
+
+.alert {
+  outline: solid 2 px #d47d5f !important;
+}
+
 main img {
   margin: 50px 0 40px 0;
 }
 
 .calculator-wrapper {
-  width: 100%;
+  width: 100vw;
   background-color: hsl(0, 0%, 100%);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  padding: 30px 0;
+  padding: 40px 0 30px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -131,7 +139,7 @@ main img {
 form label,
 p {
   display: block;
-  font-size: 0.65em;
+  font-size: 0.66em;
 }
 
 #bill,
@@ -151,6 +159,25 @@ form #bill,
   border-radius: 6px;
   box-sizing: border-box;
   padding-right: 15px;
+  box-sizing: border-box;
+}
+
+/* -- remove default drop down arrow spinners -- */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+  caret-color: hsl(172, 67%, 45%);
 }
 
 #bill {
@@ -166,6 +193,11 @@ form #bill,
   background-repeat: no-repeat;
   background-position: 15px 15px;
   margin-top: 10px;
+}
+
+#num-people::placeholder,
+#bill::placeholder {
+  color: hsl(184, 14%, 56%);
 }
 
 .btn-group {
@@ -184,17 +216,49 @@ button {
   border-radius: 6px;
   background-color: hsl(183, 100%, 15%);
   color: hsl(0, 0%, 100%);
+  padding: 0;
 }
 
-.custom-btn {
+button:hover {
+  background-color: #9fe8df;
+  color: hsl(183, 100%, 15%);
+}
+#custom-btn {
+  width: 47.5%;
+  min-width: 0;
+  height: 49px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
   background-color: hsl(189, 41%, 97%);
-  color: hsl(186, 14%, 43%);
+
   text-align: right;
+  box-sizing: border-box;
   padding-right: 15px;
+  color: hsl(183, 100%, 15%);
+}
+
+#custom-btn::placeholder {
+  color: hsl(186, 14%, 43%);
+}
+
+.num-people-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.num-people-wrapper p {
+  margin: 0;
+}
+
+.alert-text {
+  color: #d47d5f;
 }
 
 .results-container {
-  width: 87%;
+  width: 86%;
   background: hsl(183, 100%, 15%);
   color: hsl(0, 0%, 100%);
   display: flex;
@@ -243,6 +307,12 @@ button {
   border: none;
   font-size: 0.8em;
   margin-top: 20px;
+}
+
+#reset:hover {
+  background-color: #9fe8df;
+  color: hsl(183, 100%, 15%);
+  outline: none;
 }
 
 /* --Footer-- */
