@@ -14,16 +14,15 @@
 
     <title>Frontend Mentor | Tip calculator app</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/scripts.js" defer></script>
   </head>
   <body>
     <main>
@@ -32,7 +31,9 @@
         <div class="input-container">
           <form>
             <label for="bill">Bill</label>
+
             <input id="bill" type="number" min="1" step="any" placeholder="0" />
+
             <p>Select Tip %</p>
             <div class="btn-group">
               <button type="button" value="5">5%</button>
@@ -40,19 +41,22 @@
               <button type="button" value="15">15%</button>
               <button type="button" value="25">25%</button>
               <button type="button" value="50">50%</button>
-              <button type="button" value="custom">Custom</button>
+              <button class="custom-btn" type="button" value="custom">
+                Custom
+              </button>
             </div>
+
             <label for="num-people">Number of People</label>
             <input id="num-people" type="number" placeholder="0" />
           </form>
         </div>
         <div class="results-container">
           <div class="tip-container">
-            <div class="tip-heading">Tip Amount <span>/ person</span></div>
+            <p class="tip-text">Tip Amount <br /><span>/ person</span></p>
             <div class="tip-amount">$<span>0.00</span></div>
           </div>
           <div class="total-container">
-            <div class="total-heading">Total <span>/ person</span></div>
+            <p class="total-text">Total <br /><span>/ person</span></p>
             <div class="total">$<span>0.00</span></div>
           </div>
           <label for="reset"></label>
