@@ -41,12 +41,18 @@
               <button type="button" value="15">15%</button>
               <button type="button" value="25">25%</button>
               <button type="button" value="50">50%</button>
-              <button class="custom-btn" type="button" value="custom">
-                Custom
-              </button>
+              <input
+                id="custom-btn"
+                type="number"
+                placeholder="Custom"
+                value=""
+              />
             </div>
 
-            <label for="num-people">Number of People</label>
+            <div class="num-people-wrapper">
+              <p class="num-people-text">Number of People</p>
+              <p class="alert-text hide">Can't be zero</p>
+            </div>
             <input id="num-people" type="number" placeholder="0" />
           </form>
         </div>
