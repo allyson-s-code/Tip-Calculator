@@ -103,6 +103,7 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -121,12 +122,12 @@ main img {
 .calculator-wrapper {
   width: 100vw;
   background-color: hsl(0, 0%, 100%);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px;
   padding: 40px 0 30px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0px 20px 37px 2px hsl(172, 67%, 45%, 0.2);
 }
 
 .input-container {
@@ -223,6 +224,12 @@ button:hover {
   background-color: #9fe8df;
   color: hsl(183, 100%, 15%);
 }
+
+button:active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
 #custom-btn {
   width: 47.5%;
   min-width: 0;
@@ -320,8 +327,73 @@ button:hover {
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 60px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
   text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .calculator-wrapper {
+    width: 500px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main img {
+    margin: 160px 0 85px 0;
+  }
+
+  .calculator-wrapper {
+    width: 922px;
+    height: 485px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .input-container {
+    width: 41%;
+    margin-left: 49px;
+  }
+
+  .results-container {
+    width: 45%;
+    height: 418px;
+    margin-top: 0;
+    margin-right: 33px;
+    box-sizing: border-box;
+    align-content: flex-start;
+  }
+
+  button,
+  #custom-btn {
+    width: 30.5%;
+  }
+
+  .tip-container,
+  .total-container {
+    width: 80%;
+    height: 50px;
+  }
+
+  .tip-container {
+    margin-top: 20px;
+  }
+
+  .total-container {
+    margin-top: 45px;
+  }
+
+  .tip-amount,
+  .total {
+    font-size: 2em;
+  }
+  #reset {
+    width: 80%;
+    margin-top: 130px;
+  }
 }
