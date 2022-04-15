@@ -22,14 +22,14 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/scripts.js" defer></script>
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <main>
       <img src="images/logo.svg" alt="Splitter" />
       <div class="calculator-wrapper">
         <div class="input-container">
-          <form>
+          <form id="input-form">
             <label for="bill">Bill</label>
 
             <input id="bill" type="number" min="1" step="any" placeholder="0" />
@@ -45,7 +45,7 @@
                 id="custom-btn"
                 type="number"
                 placeholder="Custom"
-                value=""
+                value="0"
               />
             </div>
 
