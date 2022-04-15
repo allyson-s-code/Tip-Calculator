@@ -182,7 +182,7 @@ input:focus {
 }
 
 #bill {
-  background-image: url("/images/icon-dollar.svg");
+  background-image: url("../images/icon-dollar.svg");
   background-repeat: no-repeat;
   background-position: 15px 15px;
   margin-top: 10px;
@@ -190,7 +190,7 @@ input:focus {
 }
 
 #num-people {
-  background-image: url("/images/icon-person.svg");
+  background-image: url("../images/icon-person.svg");
   background-repeat: no-repeat;
   background-position: 15px 15px;
   margin-top: 10px;
@@ -226,6 +226,11 @@ button:hover {
 }
 
 button:active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+button:focus {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
