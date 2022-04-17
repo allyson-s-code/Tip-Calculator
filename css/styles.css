@@ -292,11 +292,15 @@ button:focus {
 }
 
 .tip-text,
-.tip-amount,
-.total-text,
-.total {
-  width: 45%;
+.total-text {
+  width: 35%;
 }
+
+.tip-amount,
+.total {
+  width: 65%;
+}
+
 .results-container p span {
   color: hsl(186, 14%, 43%);
   font-size: 0.55rem;
@@ -325,6 +329,10 @@ button:focus {
   background-color: #9fe8df;
   color: hsl(183, 100%, 15%);
   outline: none;
+}
+
+#reset:active {
+  transform: scale(0.95);
 }
 
 /* --Footer-- */
