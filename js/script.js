@@ -5,6 +5,7 @@ const numPeople = document.getElementById("num-people");
 const alert = document.querySelector(".alert-text");
 const tipAmountPP = document.querySelector(".tip-amount span");
 const totalAmount = document.querySelector(".total span");
+const reset = document.getElementById("reset");
 
 //Global variables
 let bill, selectedTip, tipInput, people;
@@ -28,6 +29,9 @@ function updateTip() {
   if (people !== 0) {
     tip = (bill * tipInput) / 100 / people;
     tipAmountPP.innerText = `${tip.toFixed(2)}`;
+    alert.classList.add("hide");
+  } else {
+    alert.classList.remove("hide");
   }
 }
 
@@ -61,4 +65,12 @@ customTip.addEventListener("input", function (e) {
 //grab number of people input
 numPeople.addEventListener("input", function (e) {
   updateAmount();
+});
+
+//reset form
+reset.addEventListener("click", function () {
+  document.querySelector("form").reset();
+  tipAmountPP.innerText = "0.00";
+  totalAmount.innerText = "0.00";
+  alert.classList.add("hide");
 });
