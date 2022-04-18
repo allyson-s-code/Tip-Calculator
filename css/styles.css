@@ -86,6 +86,12 @@ textarea {
 /* ==========================================================================
       Author's custom styles
     ========================================================================== */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 24px;
 }
@@ -140,6 +146,7 @@ main img {
 }
 
 form label,
+legend,
 p {
   display: block;
   font-size: 0.66em;
@@ -147,7 +154,8 @@ p {
 
 #bill,
 #num-people,
-button,
+.percent-btn,
+#custom-btn,
 #reset {
   cursor: pointer;
 }
@@ -203,7 +211,7 @@ input:focus {
   color: hsl(184, 14%, 56%);
 }
 
-.btn-group {
+.percent-input-group {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -211,7 +219,14 @@ input:focus {
   margin: 20px 0;
 }
 
-button {
+input[type="radio"] {
+  width: 47.5%;
+  height: 49px;
+  top: 0;
+  cursor: pointer;
+}
+
+.form-control {
   width: 47.5%;
   height: 49px;
   margin-bottom: 15px;
@@ -220,19 +235,18 @@ button {
   background-color: hsl(183, 100%, 15%);
   color: hsl(0, 0%, 100%);
   padding: 0;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-button:hover {
+input[type="radio"]:hover + label {
   background-color: #9fe8df;
   color: hsl(183, 100%, 15%);
 }
 
-button:active {
-  background-color: hsl(172, 67%, 45%);
-  color: hsl(183, 100%, 15%);
-}
-
-button:focus {
+input[type="radio"]:checked + label {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
@@ -245,7 +259,7 @@ button:focus {
   border: none;
   border-radius: 6px;
   background-color: hsl(189, 41%, 97%);
-
+  font-size: 1rem;
   text-align: right;
   box-sizing: border-box;
   padding-right: 15px;
@@ -394,7 +408,7 @@ button:focus {
     align-content: flex-start;
   }
 
-  button,
+  .form-control,
   #custom-btn {
     width: 30.5%;
   }

@@ -1,5 +1,5 @@
 const billInput = document.getElementById("bill");
-const tipButtons = document.querySelectorAll("button");
+const tipButtons = document.querySelectorAll("percent-input");
 const customTip = document.getElementById("custom-btn");
 const numPeople = document.getElementById("num-people");
 const alert = document.querySelector(".alert-text");
@@ -53,6 +53,7 @@ for (const button of tipButtons) {
   button.addEventListener("click", function (e) {
     selectedTip = e.target.value;
     updateAmount();
+    console.log(selectedTip);
   });
 }
 

@@ -31,23 +31,63 @@
         <div class="input-container">
           <form id="input-form">
             <label for="bill">Bill</label>
-
             <input id="bill" type="number" min="1" step="any" placeholder="0" />
+            <fieldset>
+              <legend>Select Tip %</legend>
+              <div class="percent-input-group">
+                <input
+                  id="5"
+                  type="radio"
+                  name="radio"
+                  value="5"
+                  class="percent-input"
+                />
+                <label for="5" class="form-control"><span>5%</span></label>
 
-            <p>Select Tip %</p>
-            <div class="btn-group">
-              <button type="button" value="5">5%</button>
-              <button type="button" value="10">10%</button>
-              <button type="button" value="15">15%</button>
-              <button type="button" value="25">25%</button>
-              <button type="button" value="50">50%</button>
-              <input
-                id="custom-btn"
-                type="number"
-                placeholder="Custom"
-                value=""
-              />
-            </div>
+                <input
+                  id="10"
+                  type="radio"
+                  name="radio"
+                  value="10"
+                  class="percent-input"
+                />
+                <label for="10" class="form-control"><span>10%</span></label>
+
+                <input
+                  id="15"
+                  type="radio"
+                  name="radio"
+                  value="15"
+                  class="percent-input"
+                />
+                <label for="15" class="form-control"><span>15%</span></label>
+
+                <input
+                  id="25"
+                  type="radio"
+                  name="radio"
+                  value="25"
+                  class="percent-input"
+                />
+                <label for="25" class="form-control"><span>25%</span></label>
+
+                <input
+                  id="50"
+                  type="radio"
+                  name="radio"
+                  value="50"
+                  class="percent-input"
+                />
+                <label for="50" class="form-control"><span>50%</span></label>
+
+                <input
+                  id="custom-btn"
+                  type="number"
+                  placeholder="Custom"
+                  value=""
+                />
+              </div>
+            </fieldset>
 
             <div class="num-people-wrapper">
               <p class="num-people-text">Number of People</p>
