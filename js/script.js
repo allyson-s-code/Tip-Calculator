@@ -53,7 +53,6 @@ for (const button of tipButtons) {
   button.addEventListener("click", function (e) {
     selectedTip = e.target.value;
     updateAmount();
-    console.log(selectedTip);
   });
 }
 
@@ -61,6 +60,13 @@ for (const button of tipButtons) {
 customTip.addEventListener("input", function (e) {
   selectedTip = null;
   updateAmount();
+});
+
+//clear checked state for radio percent inputs when custom input is clicked-Not working!
+customTip.addEventListener("click", function () {
+  document
+    .querySelectorAll(".percent-input .percent-input.label")
+    .classList.remove("checked");
 });
 
 //grab number of people input
