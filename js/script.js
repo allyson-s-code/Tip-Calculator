@@ -1,5 +1,5 @@
 const billInput = document.getElementById("bill");
-const tipButtons = document.querySelectorAll("percent-input");
+const tipButtons = document.querySelectorAll(".percent-input");
 const customTip = document.getElementById("custom-btn");
 const numPeople = document.getElementById("num-people");
 const alert = document.querySelector(".alert-text");
