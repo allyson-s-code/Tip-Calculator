@@ -62,11 +62,10 @@ customTip.addEventListener("input", function (e) {
   updateAmount();
 });
 
-//clear checked state for radio percent inputs when custom input is clicked-Not working!
+//clear checked state for radio percent inputs when custom input is clicked
 customTip.addEventListener("click", function () {
-  document
-    .querySelectorAll(".percent-input .percent-input.label")
-    .classList.remove("checked");
+  const radioInputs = document.querySelectorAll(".percent-input");
+  radioInputs.forEach((input) => (input.checked = false));
 });
 
 //grab number of people input
